@@ -7,41 +7,28 @@
 
 package frc.robot.Commands;
 
-import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.robot.Robot;
 
-public class ButtonCommandToggleClamp extends Command {
-  public ButtonCommandToggleClamp() {
+/**
+ * Add your docs here.
+ */
+public class InstantCommandToggleClamp extends InstantCommand {
+  /**
+   * Add your docs here.
+   */
+  public InstantCommandToggleClamp() {
+    super();
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
+
     requires(Robot.SUBSYSTEM_CLAMP);
   }
 
-  // Called just before this Command runs the first time
+  // Called once when the command executes
   @Override
   protected void initialize() {
-  }
-
-  // Called repeatedly when this Command is scheduled to run
-  @Override
-  protected void execute() {
     Robot.SUBSYSTEM_CLAMP.ToggleClamp();
   }
 
-  // Make this return true when this Command no longer needs to run execute()
-  @Override
-  protected boolean isFinished() {
-    return true;
-  }
-
-  // Called once after isFinished returns true
-  @Override
-  protected void end() {
-  }
-
-  // Called when another command which requires one or more of the same
-  // subsystems is scheduled to run
-  @Override
-  protected void interrupted() {
-  }
 }

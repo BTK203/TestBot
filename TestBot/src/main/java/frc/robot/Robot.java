@@ -29,6 +29,7 @@ public class Robot extends TimedRobot {
   public static SubsytemDrive SUBSYSTEM_DRIVE;
   public static SubsystemSkrew SUBSYSTEM_SKREW;
   public static SubsystemClamp SUBSYSTEM_CLAMP;
+  public static OI oi;
 
   /**
    * This function is run when the robot is first started up and should be

@@ -8,9 +8,6 @@
 package frc.robot.Commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
-import frc.robot.Constants;
 import frc.robot.OI;
 import frc.robot.Robot;
 

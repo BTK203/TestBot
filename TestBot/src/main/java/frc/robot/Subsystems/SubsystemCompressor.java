@@ -5,24 +5,28 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot;
+package frc.robot.Subsystems;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.Commands.InstantCommandToggleClamp;
-import frc.robot.Util.Xbox;
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
  */
-public class OI {
-    public static final Joystick DRIVER = new Joystick(0);
+public class SubsystemCompressor extends Subsystem {
+  // Put methods for controlling this subsystem
+  // here. Call these from Commands.
 
-    public OI() {
-        Button clamp = new JoystickButton(DRIVER, Xbox.A);
-        clamp.whenPressed(new InstantCommandToggleClamp());
-    
-    }
+  private Compressor compressor;
+
+  @Override
+  public void initDefaultCommand() {
+    // Set the default command for a subsystem here.
+    // setDefaultCommand(new MySpecialCommand());
+  }
+
+  public SubsystemCompressor() {
+    compressor = new Compressor();
+  }
 
 }

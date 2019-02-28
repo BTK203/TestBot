@@ -35,4 +35,5 @@ public class SubsystemClamp extends Subsystem {
     clamp.set(clamped);
     clamped = !clamped;
   }
+
 }
