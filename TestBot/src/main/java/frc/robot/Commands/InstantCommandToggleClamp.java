@@ -7,6 +7,7 @@
 
 package frc.robot.Commands;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.InstantCommand;
 import frc.robot.Robot;
 
@@ -29,6 +30,7 @@ public class InstantCommandToggleClamp extends InstantCommand {
   @Override
   protected void initialize() {
     Robot.SUBSYSTEM_CLAMP.ToggleClamp();
+    DriverStation.reportWarning("CLAMP TOGGLE", false);
   }
 
 }

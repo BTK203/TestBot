@@ -27,7 +27,7 @@ public class ManualCommandElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.SUBSYSTEM_SKREW.Elevate(OI.DRIVER);
+    Robot.SUBSYSTEM_SKREW.Elevate(OI.OPERATOR);
   }
 
   // Make this return true when this Command no longer needs to run execute()

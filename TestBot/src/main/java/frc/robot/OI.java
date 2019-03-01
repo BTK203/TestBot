@@ -18,9 +18,10 @@ import frc.robot.Util.Xbox;
  */
 public class OI {
     public static final Joystick DRIVER = new Joystick(0);
+    public static final Joystick OPERATOR = new Joystick(1);
 
     public OI() {
-        Button clamp = new JoystickButton(DRIVER, Xbox.A);
+        Button clamp = new JoystickButton(OPERATOR, Xbox.A);
         clamp.whenPressed(new InstantCommandToggleClamp());
     
     }

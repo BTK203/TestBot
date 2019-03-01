@@ -41,6 +41,7 @@ public class Robot extends TimedRobot {
     SUBSYSTEM_DRIVE = new SubsytemDrive();
     SUBSYSTEM_SKREW = new SubsystemSkrew();
     SUBSYSTEM_CLAMP = new SubsystemClamp();
+    oi = new OI();
 
     DriverStation.reportWarning("INIT DONE, GOOD LUCK", false);
   }

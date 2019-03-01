@@ -45,11 +45,24 @@ public class Constants {
      * Ramps
      */
     public static final double
-        DRIVE_RAMP = 0;
+        DRIVE_RAMP = 0.15;
 
     /**
      * Solenoid values
      */
     public static final int 
         CLAMP_ID = 5;
+
+    /**
+     * Limit switch values
+     */
+    public static final int 
+        SKREW_UPPER_SWITCH_ID = 5,
+        SKREW_LOWER_SWITCH_ID = 4;
+
+    /**
+     * Inhibitors
+     */
+    public static final double
+        SKREW_INHIBITOR = 0.5;
 }

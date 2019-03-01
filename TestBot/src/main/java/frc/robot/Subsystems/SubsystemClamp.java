@@ -9,6 +9,7 @@ package frc.robot.Subsystems;
 
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.DriverStation;
 import frc.robot.Constants;
 
 /**
@@ -19,6 +20,7 @@ public class SubsystemClamp extends Subsystem {
   // here. Call these from Commands.
 
   private Solenoid clamp;
+  //private Solenoid test;
   private boolean clamped = false;
 
   @Override
@@ -29,10 +31,13 @@ public class SubsystemClamp extends Subsystem {
 
   public SubsystemClamp() {
     clamp = new Solenoid(Constants.CLAMP_ID);
+    //test = new Solenoid(6);
   }
 
   public void ToggleClamp() {
+    DriverStation.reportWarning("TOGGLE CLAMP", false);
     clamp.set(clamped);
+    //test.set(!clamped);
     clamped = !clamped;
   }
 
